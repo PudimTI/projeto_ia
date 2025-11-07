@@ -19,7 +19,7 @@ def clear_screen() -> None:
 def print_banner() -> None:
     """Exibe um banner colorido com o nome da IA."""
     title = Text("IA de Minecraft", style="bold green")
-    subtitle = Text("Seu guia amigável para aventuras no bloco!", style="italic cyan")
+    subtitle = Text("Seu guia amigável para suas aventuras no Minecraft!", style="italic cyan")
     panel = Panel.fit(
         Text.assemble(title, "\n", subtitle),
         border_style="bright_green",

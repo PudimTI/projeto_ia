@@ -43,7 +43,7 @@ def main() -> None:
             console.print("[red]Ops! Digite algo para que eu possa ajudar.[/]")
             continue
 
-        with console.status("Consultando os blocos mágicos...", spinner="dots") as status:  # type: Status
+        with console.status("Carregando os blocos...", spinner="dots") as status:  # type: Status
             try:
                 response = chat.generate_response(user_input)
                 status.stop()
