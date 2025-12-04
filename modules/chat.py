@@ -31,12 +31,12 @@ def _get_client() -> OpenAI:
 def generate_response(prompt: str) -> str:
     """Gera uma resposta usando o modelo gpt-4o-mini."""
     client = _get_client()
-    response = client.responses.create(
+    response = client.chat.completions.create(
         model="gpt-4o-mini",
-        input=[
+        messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt},
         ],
     )
-    return response.output_text or "Não consegui gerar uma resposta agora. Tente novamente."
+    return response.choices[0].message.content or "Não consegui gerar uma resposta agora. Tente novamente."
 

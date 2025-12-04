@@ -12,8 +12,16 @@ Projeto de assistente virtual especializado em Minecraft, pronto para oferecer d
 - Instale as dependências com `pip install -r requirements.txt`.
 
 ## Execução
+
+### Interface de Linha de Comando
 - Configure as variáveis de ambiente conforme indicado abaixo.
 - Inicie a aplicação com `python main.py`.
+
+### Interface Web (Django)
+- Configure as variáveis de ambiente conforme indicado abaixo.
+- Execute as migrações: `python manage.py migrate`
+- Inicie o servidor: `python manage.py runserver`
+- Acesse `http://127.0.0.1:8000` no seu navegador
 
 ## Configuração da OpenAI
 - Renomeie `.env.example` para `.env`.
